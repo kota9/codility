@@ -3,6 +3,24 @@ package org.example;
 import java.util.Arrays;
 
 public class Demo {
+    public static void main(String[] args) {
+        // Demo test
+        // MissingInteger
+        // 배열에서 등장하지 않는 가장 작은 양의 정수(Missing Integer)
+        int[] A = {1, 3, 6, 4, 1, 2};
+        int[] B = {1, 2, 3};
+        int[] C = {-1, -3};
+
+        Demo demo = new Demo();
+        System.out.println(demo.missingInteger(A));
+        System.out.println(demo.missingInteger(B));
+        System.out.println(demo.missingInteger(C));
+//        System.out.println(demo.missingIntegerByChatGPT(A));
+//        System.out.println(demo.missingIntegerByChatGPT(B));
+//        System.out.println(demo.missingIntegerByChatGPT(C));
+
+    }
+
     // 배열에서 등장하지 않는 가장 작은 양의 정수(Missing Integer)
     /**
      * This is a demo task.
@@ -27,7 +45,7 @@ public class Demo {
      * Copyright 2009–2026 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
      */
     // 내가 푼 답안. O(NlogN)
-    public int solution(int[] A) {
+    public int missingInteger(int[] A) {
         Arrays.sort(A);
 
         int min = 1;
@@ -44,7 +62,7 @@ public class Demo {
     }
 
     // ChatGPT가 푼 답안. O(N)
-    public int solutionByChatGPT(int[] A) {
+    public int missingIntegerByChatGPT(int[] A) {
         int N = A.length;
 
         // 각 양의 정수의 등장 여부를 기록
