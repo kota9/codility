@@ -7,14 +7,76 @@ public class CountingElements {
     public static void main(String[] args) {
         CountingElements countingElements = new CountingElements();
 
-        int N = 5;
-        int[] A = {3, 4, 4, 6, 1, 4, 4};
+        // frogRiverOne
+        int X = 5;
+        int[] A = {1, 3, 1, 4, 2, 3, 5, 4};
+        System.out.println(countingElements.frogRiverOne(X, A));
+        System.out.println(countingElements.frogRiverOneByChatGPT(X, A));
+
+        // maxCounters
+//        int N = 5;
+//        int[] A = {3, 4, 4, 6, 1, 4, 4};
 //        int N = 3;
 //        int[] A = {1, 4, 2, 2, 4, 3};
-        System.out.println(Arrays.toString(countingElements.maxCountersByChatGPT(N, A)));
+//        System.out.println(Arrays.toString(countingElements.maxCountersByChatGPT(N, A)));
     }
 
-    // No solve
+    // forgRiverOne
+    public int frogRiverOne(int X, int[] A) {
+        // 현재 나뭇잎이 놓여있는 곳을 체크하는 배열
+        boolean[] exists = new boolean[X+1];
+
+        // A배열 순회
+        for (int i=0; i<A.length; i++) {
+            exists[A[i]] = true;
+
+            // 나뭇잎이 다 놓여져 있는지 체크
+            boolean flag = true;
+            for (int j=1; j<exists.length; j++) {
+                // false인 값이 있다면 break
+                if (exists[j]==false) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            // 모두 놓여 있다면 해당 시간(초)을 리턴
+            if (flag==true) {
+                return i;
+            }
+        }
+
+        // 불가능하면 -1을 리턴
+        return -1;
+    }
+
+    public int frogRiverOneByChatGPT(int X, int[] A) {
+        boolean[] covered = new boolean[X + 1];
+        int count = 0;
+
+        for (int i = 0; i < A.length; i++) {
+            int position = A[i];
+
+            // 해당 위치에 처음 나뭇잎이 떨어진 경우
+            if (!covered[position]) {
+                covered[position] = true;
+                count++;
+
+                // 1부터 X까지 모든 위치가 덮인 경우
+                if (count == X) {
+                    return i;
+                }
+            }
+
+        }
+        return -1;
+    }
+
+
+
+
+
+    // maxCounters. No solve
     public int[] maxCounters(int N, int[] A) {
         // maxCounter 값은 별도로 저장. N+1
         int maxCounterCnt = 0;
