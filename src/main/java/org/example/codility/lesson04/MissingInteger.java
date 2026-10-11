@@ -1,25 +1,8 @@
-package org.example;
+package org.example.codility.lesson04;
 
 import java.util.Arrays;
 
-public class Demo {
-    public static void main(String[] args) {
-        // Demo test
-        // MissingInteger
-        // 배열에서 등장하지 않는 가장 작은 양의 정수(Missing Integer)
-        int[] A = {1, 3, 6, 4, 1, 2};
-        int[] B = {1, 2, 3};
-        int[] C = {-1, -3};
-
-        Demo demo = new Demo();
-        System.out.println(demo.missingInteger(A));
-        System.out.println(demo.missingInteger(B));
-        System.out.println(demo.missingInteger(C));
-//        System.out.println(demo.missingIntegerByChatGPT(A));
-//        System.out.println(demo.missingIntegerByChatGPT(B));
-//        System.out.println(demo.missingIntegerByChatGPT(C));
-
-    }
+public class MissingInteger {
 
     // 배열에서 등장하지 않는 가장 작은 양의 정수(Missing Integer)
     /**

@@ -1,38 +1,6 @@
-package org.example;
+package org.example.tree;
 
 public class Tree {
-    public static void main(String[] args) {
-        Tree tree = new Tree();
-
-        // getNumberOfBalancedNodes
-        // 리프 노드
-        Node n5 = new Node();
-        Node n6 = new Node();
-        Node n7 = new Node();
-        Node n8 = new Node();
-        Node n9 = new Node();
-
-        // 노드 4: 자식 9
-        Node n4 = new Node(n9);
-
-        // 노드 1: 자식 4, 5
-        Node n1 = new Node(n4, n5);
-
-        // 노드 2: 자식 6
-        Node n2 = new Node(n6);
-
-        // 노드 3: 자식 7, 8
-        Node n3 = new Node(n7, n8);
-
-        // 루트 노드 0: 자식 1, 2, 3
-        Node root = new Node(n1, n2, n3);
-
-        // 테스트
-        // 예상 결과: 8
-        int result = tree.getNumberOfBalancedNodes(root);
-        System.out.println(result);
-    }
-
     static class Node {
         Node[] children;
 

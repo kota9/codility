@@ -1,29 +1,6 @@
-package org.example;
+package org.example.codility.lesson03;
 
 public class TimeComplexity {
-    public static void main(String[] args) {
-        TimeComplexity timeComplexity = new TimeComplexity();
-
-        // frogJmp
-        /*int X = 10;
-        int Y = 85;
-        int D = 30;
-
-        System.out.println(timeComplexity.frogJmp(X, Y, D));
-        System.out.println(timeComplexity.frogJmpByChatGPT(X, Y, D));*/
-
-        // permMissingEmem
-//        int[] A = {2, 3, 1, 5};
-//        System.out.println(timeComplexity.permMissingElem(A));
-//        System.out.println(timeComplexity.permMissingEmelByChatGPT(A));
-
-        // tapeEquilibrium
-        // AI 풀이는 내 풀이와 유사해서 생략.
-        int[] A = {3, 1, 2, 4, 3};
-        System.out.println(timeComplexity.tapeEquilibrium(A));
-
-    }
-
     // frogJmp
     public int frogJmp(int X, int Y, int D) {
         int count = 0;

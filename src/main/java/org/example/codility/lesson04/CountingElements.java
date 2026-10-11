@@ -1,26 +1,8 @@
-package org.example;
+package org.example.codility.lesson04;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class CountingElements {
-    public static void main(String[] args) {
-        CountingElements countingElements = new CountingElements();
-
-        // frogRiverOne
-        int X = 5;
-        int[] A = {1, 3, 1, 4, 2, 3, 5, 4};
-        System.out.println(countingElements.frogRiverOne(X, A));
-        System.out.println(countingElements.frogRiverOneByChatGPT(X, A));
-
-        // maxCounters
-//        int N = 5;
-//        int[] A = {3, 4, 4, 6, 1, 4, 4};
-//        int N = 3;
-//        int[] A = {1, 4, 2, 2, 4, 3};
-//        System.out.println(Arrays.toString(countingElements.maxCountersByChatGPT(N, A)));
-    }
-
     // forgRiverOne
     public int frogRiverOne(int X, int[] A) {
         // 현재 나뭇잎이 놓여있는 곳을 체크하는 배열
@@ -71,10 +53,6 @@ public class CountingElements {
         }
         return -1;
     }
-
-
-
-
 
     // maxCounters. No solve
     public int[] maxCounters(int N, int[] A) {
